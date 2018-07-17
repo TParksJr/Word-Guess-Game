@@ -1,0 +1,2 @@
+# Word-Guess-Game
+In this game the computer randomly selects a animal name that the player must attempt to guess by guessing letters contained in the selected animal name. Be careful you only have a limited number of guesses!
