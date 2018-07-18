@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Hangman Game</title>
-        <link href="assets/css/reset.css">
-        <link href="assets/css/style.css">
-    </head>
-    <body>
-        <h1>Hangman Game!</h1>
-        <p>Press any key to get started!</p>
+
+<head>
+    <title>Hangman Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <h1>Hangman Game!</h1>
+    <p id="instructions">Press any key to get started!</p>
+
+    <div class="container" id="game">
+
+
         <p>
-            Wins: <span id="wins"></span>
+            Wins:
+            <span id="wins"></span>
         </p>
         <p>
-            Losses: <span id="losses"></span>
+            Losses:
+            <span id="losses"></span>
         </p>
         <p>
-            Remaining Guesses: <span id="remaining"></span>
+            Remaining Guesses:
+            <span id="remaining"></span>
         </p>
         <p>
-            Guessed so far: <span id="guessed"></span>
+            Guessed so far:
+            <span id="guessed"></span>
         </p>
         <p>
-            Word to Guess: <span id="word"></span>
+            Word to Guess:
+            <span id="word"></span>
         </p>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="assets/javascript/game.js"></script>
-    </body>
+    </div>
+
+    <div class="container" id="image">
+        <img src="assets/images/state0.png" id="hangman">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
 </html>

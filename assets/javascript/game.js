@@ -4,6 +4,7 @@ $(function () {
     var wins = 0,
         losses = 0,
         remaining = 12,
+        state = 0,
         guessed = [],
         correctGuesses = [],
         word = "",
@@ -34,7 +35,7 @@ $(function () {
 
     //reset function
     function reset() {
-        remaining = 12;
+        remaining = 7;
         guessed = [];
         correctGuesses = [];
         $("#wins").text(wins);
@@ -49,6 +50,8 @@ $(function () {
         for (i = 0; i < word.length; i++) {
             $("#word").append("<span class='" + letters[i] + "'>_ </span>");
         };
+        state = 0;
+        $("#hangman").attr("src", "assets/images/state0.png")
     };
 
     reset();
@@ -69,7 +72,6 @@ $(function () {
                 else {
                     correctGuesses.push(userGuess);
 
-                    //this needs to be fixed, need to be able to select multiple elements
                     $("." + userGuess).html(userGuess + " ");
                     console.log(correctGuesses);
                     console.log(letters);
@@ -80,6 +82,22 @@ $(function () {
                 document.getElementById("remaining").innerHTML = remaining;
                 guessed.push(userGuess);
                 document.getElementById("guessed").innerHTML = guessed;
+                state++;
+                if (state == 1) {
+                    $("#hangman").attr("src", "assets/images/state1.png")
+                } else if (state == 2) {
+                    $("#hangman").attr("src", "assets/images/state2.png")
+                } else if (state == 3) {
+                    $("#hangman").attr("src", "assets/images/state3.png")
+                } else if (state == 4) {
+                    $("#hangman").attr("src", "assets/images/state4.png")
+                } else if (state == 5) {
+                    $("#hangman").attr("src", "assets/images/state5.png")
+                } else if (state == 6) {
+                    $("#hangman").attr("src", "assets/images/state6.png")
+                } else if (state == 7) {
+                    $("#hangman").attr("src", "assets/images/state7.png")
+                }
             };
         }
         else {

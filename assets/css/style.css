@@ -1,0 +1,25 @@
+.container {
+    align-content: center;
+    text-align: center;
+    margin: 20px;
+}
+h1 {
+    font-size: 200%;
+    align-content: center;
+    text-align: center;
+    margin: 10px;
+}
+#game {
+    float: left;
+    margin: 150px;
+}
+#image {
+    float: right;
+    margin: 100px;
+}
+#instructions {
+    font-size: 150%;
+    align-content: center;
+    text-align: center;
+    margin: 10px;
+}
