@@ -1,25 +1,25 @@
 .container {
     align-content: center;
     text-align: center;
-    margin: 20px;
-}
-h1 {
-    font-size: 200%;
-    align-content: center;
-    text-align: center;
-    margin: 10px;
-}
-#game {
-    float: left;
-    margin: 150px;
-}
-#image {
-    float: right;
-    margin: 100px;
 }
 #instructions {
-    font-size: 150%;
+    margin: 20px 0px 100px 0px;
     align-content: center;
     text-align: center;
-    margin: 10px;
+}
+#instructions h1 {
+    font-size: 200%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+#item1 {
+    grid-column: 1 / 5;
+}
+#item3 {
+    grid-column: 2 / 3;
+}
+#item4 {
+    grid-column: 3 / 4;
 }
